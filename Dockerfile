@@ -7,6 +7,6 @@ RUN curl -o crowdin-cli.zip -SL https://downloads.crowdin.com/cli/v2/crowdin-cli
   && sh crowdin.sh \
   && rm *.*
 
-ADD entrypoint.sh /
+ADD entrypoint.sh /usr/local/bin/crowdin
 
-ENTRYPOINT [ "/entrypoint.sh" ]
+ENTRYPOINT [ "crowdin" ]
